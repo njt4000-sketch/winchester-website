@@ -18,7 +18,11 @@
 <body>
     <header id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">St. George's House</a>
+            <div class="brand-group">
+                <img src="https://files.stgeorgeshousewinchester.co.uk/marin-logo.svg" alt="Marin Logo"
+                    class="marin-logo">
+                <a href="#" class="logo">St. George's House</a>
+            </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">The Building</a></li>
@@ -38,8 +42,8 @@
 
     <section id="hero">
         <div class="hero-image-container">
-            <img src="https://files.stgeorgeshousewinchester.co.uk/hero.png" alt="St. George's House Exterior"
-                class="hero-bg">
+            <img src="https://files.stgeorgeshousewinchester.co.uk/hero.png?v=20251215"
+                alt="St. George's House Exterior" class="hero-bg">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content container">
@@ -65,7 +69,9 @@
             </div>
             <div class="image-col reveal-right">
                 <div class="image-card">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/IMG_0343.jpeg" alt="St. George's House Building" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; border-radius: 4px;">
+                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/IMG_0343.jpeg"
+                        alt="St. George's House Building"
+                        style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; border-radius: 4px;">
                 </div>
             </div>
         </div>
@@ -75,18 +81,22 @@
         <div class="container">
             <div class="key-facts-grid">
                 <div class="key-fact reveal-up">
+                    <span class="key-fact-icon">🏠</span>
                     <span class="key-fact-number">9</span>
                     <span class="key-fact-label">Apartments</span>
                 </div>
                 <div class="key-fact reveal-up delay-1">
+                    <span class="key-fact-icon">🏙️</span>
                     <span class="key-fact-number">3</span>
                     <span class="key-fact-label">Penthouses</span>
                 </div>
                 <div class="key-fact reveal-up delay-2">
+                    <span class="key-fact-icon">⚡</span>
                     <span class="key-fact-number">A/B</span>
                     <span class="key-fact-label">EPC Rating</span>
                 </div>
                 <div class="key-fact reveal-up delay-3">
+                    <span class="key-fact-icon">🛡️</span>
                     <span class="key-fact-number">10yr</span>
                     <span class="key-fact-label">Warranty</span>
                 </div>
@@ -94,32 +104,83 @@
         </div>
     </section>
 
-    <!-- Photo Gallery Section -->
-    <section id="gallery" class="section">
+    <!-- Discover Winchester Section -->
+    <section id="gallery" class="section winchester-discover">
         <div class="container">
-            <div class="text-center mb-4">
-                <span class="eyebrow">Property Gallery</span>
-                <h2>Discover St. George's House</h2>
-                <p class="max-w-600 mx-auto">A showcase of our development bringing together historic charm with contemporary living.</p>
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <span class="eyebrow">Life in Winchester</span>
+                <h2>Discover Winchester</h2>
+                <p class="max-w-600 mx-auto intro-text">A city that balances career and lifestyle. Winchester is ideal
+                    for young professionals who want fast rail links to London, a thriving local economy, and a city
+                    centre that feels vibrant without being overwhelming.</p>
             </div>
-            <div class="photo-gallery-grid">
-                <div class="photo-gallery-item reveal-scale">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/IMG_0343.jpeg" alt="St. George's House Exterior">
+
+            <!-- Feature Grid with Images -->
+            <div class="winchester-features">
+                <!-- Row 1: Two features + One large image -->
+                <div class="feature-row reveal-up">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏡</div>
+                        <h3>Perfect for Downsizers & City Dwellers</h3>
+                        <p>Everything you need is within walking distance. Shops, cafés, restaurants, culture and
+                            transport are all close at hand, making day to day living easy and genuinely enjoyable.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3>Culture, History & Quality of Life</h3>
+                        <p>From the cathedral and theatre to independent food, wine bars and events, Winchester offers
+                            the depth and character of a historic city with the energy of a modern one.</p>
+                    </div>
+                    <div class="feature-image-large">
+                        <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch%20(1).png"
+                            alt="Winchester Scene">
+                    </div>
                 </div>
-                <div class="photo-gallery-item reveal-scale delay-1">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/IMG_0344.jpeg" alt="St. George's House View">
+
+                <!-- Row 2: Large image + Two features -->
+                <div class="feature-row reverse reveal-up delay-1">
+                    <div class="feature-image-large">
+                        <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/IMG_0344.jpeg"
+                            alt="Winchester Architecture">
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌳</div>
+                        <h3>Countryside on Your Doorstep</h3>
+                        <p>Step beyond the city and you are immediately surrounded by Hampshire countryside, river walks
+                            and the South Downs. It is city living with space to breathe.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>A Place People Choose & Stay</h3>
+                        <p>Winchester is consistently recognised as one of the best places to live in the UK, valued for
+                            its safety, affluence, education and overall quality of life.</p>
+                    </div>
                 </div>
-                <div class="photo-gallery-item reveal-scale delay-2">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch%20(1).png" alt="Winchester Scene">
+
+                <!-- Final Feature: Full Width -->
+                <div class="feature-final reveal-up delay-2">
+                    <div class="feature-final-content">
+                        <div class="feature-icon">✨</div>
+                        <h3>A Lifestyle That Feels Considered</h3>
+                        <p>Calm, confident and quietly aspirational. Winchester offers the rare combination of
+                            convenience, beauty and long term appeal.</p>
+                    </div>
                 </div>
-                <div class="photo-gallery-item reveal-scale delay-3">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch%20(2).png" alt="Winchester Architecture">
-                </div>
-                <div class="photo-gallery-item reveal-scale">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch%20(3).png" alt="Winchester Lifestyle">
-                </div>
-                <div class="photo-gallery-item reveal-scale delay-1">
-                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch.png" alt="Winchester City">
+
+                <!-- Photo Gallery Row -->
+                <div class="winchester-photo-strip reveal-up delay-3">
+                    <div class="photo-strip-item">
+                        <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch%20(2).png"
+                            alt="Winchester Architecture">
+                    </div>
+                    <div class="photo-strip-item">
+                        <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch%20(3).png"
+                            alt="Winchester Lifestyle">
+                    </div>
+                    <div class="photo-strip-item">
+                        <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch.png" alt="Winchester City">
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,42 +241,32 @@
     <section id="history" class="section dark-mode">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="eyebrow">A Location That Needs No Introduction</span>
-                <h2>Winchester at a Glance</h2>
-                <p>Winchester consistently stands out as one of the UK's most liveable cities. From St George's Street,
-                    Winchester's best bits are on your doorstep.</p>
-            </div>
-
-            <div class="winchester-stats">
-                <div class="stat-item reveal-up">
-                    <span class="stat-number">47.4%</span>
-                    <span class="stat-label">Level 4+ Qualifications</span>
-                    <span class="stat-source">Census 2021</span>
-                </div>
-                <div class="stat-item reveal-up delay-1">
-                    <span class="stat-number">9.4%</span>
-                    <span class="stat-label">Population Growth</span>
-                    <span class="stat-source">2011–2021</span>
-                </div>
-                <div class="stat-item reveal-up delay-2">
-                    <span class="stat-number">81.1%</span>
-                    <span class="stat-label">Employment Rate</span>
-                    <span class="stat-source">ONS Data</span>
-                </div>
+                <span class="eyebrow">A Rich Heritage</span>
+                <h2>History of Winchester</h2>
+                <p class="history-intro">Winchester's history spans millennia, from an Iron Age hillfort to a major
+                    Roman city and the capital of Anglo-Saxon Wessex under King Alfred the Great. It was a crucial
+                    medieval center, home to magnificent cathedrals and palaces, a royal wedding and later, the final
+                    resting place for Jane Austen. The city blends its ancient Roman grid, Saxon foundations, Norman
+                    structures, and Georgian elegance, remaining a significant historical English city.</p>
             </div>
 
             <div class="gallery-grid mt-4">
                 <div class="gallery-item large reveal-scale">
                     <img src="assets/images/cathedral.png" alt="Historic Winchester Cathedral">
-                    <div class="gallery-caption">The Iconic Cathedral</div>
+                    <div class="gallery-caption">Winchester Cathedral</div>
                 </div>
                 <div class="gallery-item reveal-scale delay-1">
-                    <img src="assets/images/highstreet.png" alt="Historic High Street">
-                    <div class="gallery-caption">Independent Shops & Dining</div>
+                    <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/alfredgreat.JPG"
+                        alt="King Alfred the Great Statue">
+                    <div class="gallery-caption">King Alfred the Great</div>
                 </div>
                 <div class="gallery-item reveal-scale delay-2">
+                    <img src="assets/images/highstreet.png" alt="Historic High Street">
+                    <div class="gallery-caption">Historic High Street</div>
+                </div>
+                <div class="gallery-item reveal-scale delay-3">
                     <img src="https://files.stgeorgeshousewinchester.co.uk/Photos/winch.png" alt="Winchester City View">
-                    <div class="gallery-caption">Culture & Theatres</div>
+                    <div class="gallery-caption">Winchester City View</div>
                 </div>
             </div>
         </div>
@@ -289,5 +340,3 @@
 
     <script src="assets/js/script.js"></script>
 </body>
-
-</html>
