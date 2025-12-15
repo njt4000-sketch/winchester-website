@@ -30,9 +30,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle (Simple)
+    // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
-    // Note: Hamburger CSS/JS logic specific can be added if needed, sticking to desktop focus for 'luxury' vibe first pass.
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+
+    // Create overlay element for mobile menu
+    const navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    body.appendChild(navOverlay);
+
+    function toggleMobileMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+
+        // Update aria-expanded
+        const isExpanded = hamburger.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+
+        // Prevent body scroll when menu is open
+        body.style.overflow = isExpanded ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        navOverlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+    }
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when clicking overlay
+        navOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking a nav link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+    }
 
     // Contact Form Submission Handler
     const contactForm = document.getElementById('contact-form');
@@ -48,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Disable button and show loading state
             submitButton.disabled = true;
+            submitButton.classList.add('loading');
             submitButton.textContent = 'Sending...';
 
             try {
@@ -78,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } finally {
                 // Re-enable button
                 submitButton.disabled = false;
+                submitButton.classList.remove('loading');
                 submitButton.textContent = originalButtonText;
             }
         });
