@@ -1247,6 +1247,128 @@ footer a:hover {
     }
 }
 
+/* ==========================================================================
+   Accommodation Table
+   ========================================================================== */
+.accommodation-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    background: #fff;
+}
+
+.accommodation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-base);
+}
+
+.accommodation-table thead {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a4560 100%);
+}
+
+.accommodation-table th {
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--text-xs);
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.accommodation-table th:last-child,
+.accommodation-table th:nth-child(4) {
+    text-align: right;
+}
+
+.accommodation-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-color);
+    transition: background var(--transition-fast);
+}
+
+.accommodation-table td:last-child,
+.accommodation-table td:nth-child(4) {
+    text-align: right;
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--primary-color);
+}
+
+.accommodation-table tbody tr {
+    transition: background var(--transition-fast);
+}
+
+.accommodation-table tbody tr:hover {
+    background: rgba(197, 160, 89, 0.08);
+}
+
+.accommodation-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Penthouse rows - subtle gold accent */
+.accommodation-table .penthouse-row {
+    background: linear-gradient(90deg, rgba(197, 160, 89, 0.08) 0%, rgba(197, 160, 89, 0.03) 100%);
+}
+
+.accommodation-table .penthouse-row td:first-child {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.accommodation-table .penthouse-row:hover {
+    background: rgba(197, 160, 89, 0.15);
+}
+
+.accommodation-note {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+
+    .accommodation-table th,
+    .accommodation-table td {
+        padding: 0.875rem 1rem;
+    }
+
+    .accommodation-table th {
+        font-size: 0.65rem;
+    }
+
+    .accommodation-table td {
+        font-size: var(--text-sm);
+    }
+
+    .accommodation-table td:last-child,
+    .accommodation-table td:nth-child(4) {
+        font-size: var(--text-base);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .accommodation-table th:nth-child(3),
+    .accommodation-table td:nth-child(3) {
+        display: none;
+    }
+
+    .accommodation-table th,
+    .accommodation-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
 /* Button Loading State */
 .btn-primary.loading {
     pointer-events: none;
