@@ -395,7 +395,9 @@ header {
     font-family: var(--font-heading);
     letter-spacing: 1px;
     margin-bottom: 2.5rem;
-    color: var(--accent-color);
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
 }
 
