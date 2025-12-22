@@ -80,6 +80,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Parallax Effect for feature images (Optional, can be added later or removed if simple is better)
+    // Removed Hero Parallax to allow CSS Zoom animation to shine without conflict
+
     // Contact Form Submission Handler
     const contactForm = document.getElementById('contact-form');
     const thankYouModal = document.getElementById('thank-you-modal');
